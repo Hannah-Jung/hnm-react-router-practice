@@ -14,7 +14,10 @@ const ProductAll = () => {
       getProducts()
   },[])
 return (
-  <div>
+  <div className='product-card'>
+    <ProductCard/>
+    <ProductCard/>
+    <ProductCard/>
     <ProductCard/>
   </div>
   )
