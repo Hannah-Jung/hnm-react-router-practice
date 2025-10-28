@@ -1,0 +1,144 @@
+{
+    "products":[
+        {
+            "id":0,
+            "img":"https://noona-hnm.netlify.app/pattern-jacket.jpeg",
+            "title":"Belted Twill Coat",
+            "price":124.99,
+            "choice":true,
+            "new":true,
+            "size":["S","M","L","XL","XXL"]
+
+        },
+        {
+            "id":1,
+            "img":"https://noona-hnm.netlify.app/ankle-jeans.jpeg",
+            "title":"Slim-Fit Mom Jeans, High-Waist, Ankle Length",
+            "price":44.99,
+            "choice":true,
+            "new":true,
+            "size":["S","M","L","XL","XXL"]
+
+        },
+        {
+            "id":2,
+            "img":"https://noona-hnm.netlify.app/wide-jeans.jpeg",
+            "title":"Wide-Leg High-Waist Jeans",
+            "price":49.99,
+            "choice":false,
+            "new":true,
+            "size":["S","M","L","XL","XXL"]
+
+        },
+        {
+            "id":3,
+            "img":"https://noona-hnm.netlify.app/cottom-dress.jpeg",
+            "title":"Puff-Sleeve Dress",
+            "price":59.99,
+            "choice":false,
+            "new":true,
+            "size":["S","M","L","XL","XXL"]
+
+        },
+        {
+            "id":4,
+            "img":"https://noona-hnm.netlify.app/shirt-dress.jpeg",
+            "title":"Ruffle-Detail Dress",
+            "price":74.99,
+            "choice":true,
+            "new":false,
+            "size":["S","M","L","XL","XXL"]
+
+        },
+        {
+            "id":5,
+            "img":"https://noona-hnm.netlify.app/flare-dress.jpeg",
+            "title":"Sequin Flare Dress",
+            "price":54.99,
+            "choice":false,
+            "new":false,
+            "size":["S","M","L","XL","XXL"]
+
+        },
+        {
+            "id":6,
+            "img":"https://noona-hnm.netlify.app/single-jacket.jpeg",
+            "title":"Double-Breasted Jacket",
+            "price":89.99,
+            "choice":true,
+            "new":false,
+            "size":["S","M","L","XL","XXL"]
+
+        },
+        {
+            "id":7,
+            "img":"https://noona-hnm.netlify.app/oversize-hoodie.jpeg",
+            "title":"Oversized Zip-Up Hoodie",
+            "price":44.99,
+            "choice":false,
+            "new":true,
+            "size":["S","M","L","XL","XXL"]
+
+        },
+        {
+            "id":8,
+            "img":"https://noona-hnm.netlify.app/track-jacket.jpeg",
+            "title":"Appliqué Track Jacket",
+            "price":74.99,
+            "choice":true,
+            "new":true,
+            "size":["S","M","L","XL","XXL"]
+
+        },
+        {
+            "id":9,
+            "img":"https://noona-hnm.netlify.app/design-hoodie.jpeg",
+            "title":"Printed Hoodie",
+            "price":29.99,
+            "choice":false,
+            "new":true,
+            "size":["S","M","L","XL","XXL"]
+
+        },
+        {
+            "id":10,
+            "img":"https://noona-hnm.netlify.app/regular-wide-jeans.jpeg",
+            "title":"Wide-Leg Twill Pants",
+            "price":49.99,
+            "choice":true,
+            "new":false,
+            "size":["S","M","L","XL","XXL"]
+
+        },
+        {
+            "id":11,
+            "img":"https://noona-hnm.netlify.app/high-jeans.jpeg",
+            "title":"Low-Rise Flare Jeans",
+            "price":44.99,
+            "choice":true,
+            "new":true,
+            "size":["S","M","L","XL","XXL"]
+
+        },
+        {
+            "id":12,
+            "img":"https://noona-hnm.netlify.app/mash-dress.jpeg",
+            "title":"Mesh Shirred Dress",
+            "price":59.99,
+            "choice":true,
+            "new":true,
+            "size":["S","M","L","XL","XXL"]
+
+        },
+        {
+            "id":13,
+            "img":"https://noona-hnm.netlify.app/sweat-shirt.jpeg",
+            "title":"Sweatshirt",
+            "price":39.99,
+            "choice":false,
+            "new":false,
+            "size":["S","M","L","XL","XXL"]
+
+        }
+    ]
+}

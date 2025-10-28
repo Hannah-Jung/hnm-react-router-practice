@@ -1,0 +1,57 @@
+.top-row {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.search {
+  border-bottom: 1px solid gray;
+  padding-bottom: 5px;
+  margin-right: 5px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 150px;
+  margin-left: 5px;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  cursor: pointer;
+}
+
+.menu-list {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+  justify-content: center;
+  flex: 1;
+}
+
+.menu-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
