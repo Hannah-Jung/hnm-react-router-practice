@@ -1,13 +1,17 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useEffect, useState } from 'react'
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import ProductAll from './page/ProductAll';
 import Login from './page/Login';
 import ProductDetail from './page/ProductDetail';
 import Navbar from './component/Navbar';
+import PrivateRoute from './route/PrivateRoute';
+import Banner from './component/Banner'
+import Favorite from './page/Favorite';
+import Cart from './page/Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
 
 // 1. There are three pages: All Products, Login, and Product Detail.
 // 1-1. There's a navigation bar.
@@ -20,15 +24,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // 8. Users can search for products.
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [authenticate, setAuthenticate] = useState(false)
+  const location = useLocation()
+  useEffect(() => {
+    console.log("authenticated", authenticate)
+  },[authenticate])
   return (
       <div>
-        <Navbar/>
+        <Navbar authenticate={authenticate}/>
+        {location.pathname === "/" && <Banner />}
         <Routes>
           <Route path="/" element={<ProductAll/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/product/:id" element={<ProductDetail/>}/>
+          <Route path="/login" element={<Login setAuthenticate={setAuthenticate}/>}/>
+          <Route path="/product/:id" element={<PrivateRoute authenticate={authenticate}/>}/>
+          <Route path="/favorite" element={<Favorite/>}/>
+          <Route path="/cart" element={<Cart/>}/>
         </Routes>
       </div>
   )

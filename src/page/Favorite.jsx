@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProductDetail = () => {
+const Favorite = () => {
   return (
     <div className="msg">
         Coming soon!<br /> Please check back later.
@@ -8,4 +8,4 @@ const ProductDetail = () => {
   )
 }
 
-export default ProductDetail
+export default Favorite
