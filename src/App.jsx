@@ -10,6 +10,7 @@ import PrivateRoute from './route/PrivateRoute';
 import Banner from './component/Banner'
 import Favorite from './page/Favorite';
 import Cart from './page/Cart';
+import Footer from './component/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
@@ -30,9 +31,10 @@ function App() {
     console.log("authenticated", authenticate)
   },[authenticate])
   return (
-      <div>
-        <Navbar authenticate={authenticate}/>
+      <div className="app-container">
+        <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate}/>
         {location.pathname === "/" && <Banner />}
+        <div className='main-content'>
         <Routes>
           <Route path="/" element={<ProductAll/>}/>
           <Route path="/login" element={<Login setAuthenticate={setAuthenticate}/>}/>
@@ -40,6 +42,8 @@ function App() {
           <Route path="/favorite" element={<Favorite/>}/>
           <Route path="/cart" element={<Cart/>}/>
         </Routes>
+        </div>        
+        <Footer />
       </div>
   )
 }

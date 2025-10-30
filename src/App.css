@@ -1,7 +1,8 @@
 .top-row {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
+  flex-grow: 1;
 }
 
 .search {
@@ -15,10 +16,10 @@
   border: none;
   outline: none;
   background: transparent;
-
   width: 0;
   margin-left: 5px;
   transition: width 0.3s ease;
+  border-bottom: 1px solid transparent;
 }
 
 .search.active input {
@@ -67,7 +68,6 @@
   margin-bottom: 20px;
 }
 
-
 .logo {
   display: flex;
   justify-content: center;
@@ -84,6 +84,7 @@
   justify-content: center;
   flex: 1;
   padding-left: 0px;
+  margin-bottom: 0;
 }
 
 .menu-list li {
@@ -92,7 +93,7 @@
   cursor: pointer;
   color: dimgray;
   font-weight: 600;
-  transition: color 0.1s ease;
+  transition: color 0.5s ease;
 }
 
 .menu-list li:hover {
@@ -102,7 +103,7 @@
 
 .menu-list li span {
   display: inline-block;
-  transition: transform 0.2s ease;
+  transition: transform 0.5s ease;
 }
 
 .menu-list li:hover span {
@@ -130,6 +131,7 @@
   overflow: hidden;
   height: 75vh;
   margin: 0 auto;
+  margin-top: 15px;
 }
 
 .dual-banner img {
@@ -156,7 +158,7 @@
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.6s ease;
   object-fit: cover;
   transform-origin: center center;
   cursor: pointer;
@@ -207,10 +209,12 @@
   color: #000;
   margin-top: 8px;
   cursor: pointer;
+  transition: color 0.4s ease;
 }
 
 .item-title:hover {
-  color: dimgray
+  color: dimgray;
+
 }
 
 .item-price {
@@ -266,6 +270,65 @@ form label {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+.product-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.new-choice-badge {
+  margin-bottom: 15px;
+}
+
+.new-choice-badge>div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-title-price {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.size-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 5px;
+  margin-top: 8px;
+  margin-bottom: 30px;
+}
+
+.size-btn {
+  padding: 5px 0;
+  border: 1px solid gray;
+  border-radius: 7px;
+  background-color: white;
+  cursor: pointer;
+  font-weight: 400;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.size-btn.selected,
+.size-btn:hover {
+  background-color: #212529;
+  color: white;
+  border-color: lightgray;
+}
+
+.cart-button,
+.buy-button {
+  width: 100%;
+  padding: 10px 0;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
 .msg {
   display: flex;
   justify-content: center;
@@ -275,7 +338,103 @@ form label {
   font-weight: 400;
   font-size: 2rem;
   margin-top: 200px;
+  margin-bottom: 200px;
   text-align: center;
+}
+
+.side-menu {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: 0.3s;
+  border-right: 1px solid #ccc;
+  z-index: 2000;
+}
+
+.side-menu .close-btn {
+  font-size: 36px;
+  margin: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.side-menu-list {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.side-menu-list button {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: dimgray;
+  font-weight: 600;
+  transition: color 0.5s ease;
+}
+
+.side-menu-list button:hover {
+  color: #000;
+  font-weight: 600;
+}
+
+.burger-menu {
+  margin-left: 10px;
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  position: relative;
+  z-index: 1100;
+}
+
+.footer {
+  background-color: #f4f4f4;
+  padding: 20px 20px 20px 20px;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.footer-copy {
+  text-align: center;
+  color: #777;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
 
 @media (max-width: 768px) {
@@ -287,5 +446,18 @@ form label {
   .dual-banner img {
     width: 100%;
     height: 50%;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block !important;
+    margin-left: 20px;
+  }
+
+  .product-img {
+    margin-top: 15px;
   }
 }

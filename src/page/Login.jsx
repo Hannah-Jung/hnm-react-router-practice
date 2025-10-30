@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom'
 const Login = ({setAuthenticate}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
   const navigate = useNavigate()
   const loginUser = (event) => {
     event.preventDefault()
@@ -43,9 +42,11 @@ const Login = ({setAuthenticate}) => {
               <Form.Control type="password" placeholder="Password" value={password}
             onChange={(e) => setPassword(e.target.value)}/>
           </Form.Group>
+
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
               <Form.Check className='check-box' type="checkbox" label="Remember me" />
           </Form.Group>
+          
           <Button className='login-btn' type="submit" >
               SIGN IN
           </Button>

@@ -5,14 +5,17 @@ const Banner = () => {
   return (
     <Carousel fade>
       <Carousel.Item>
-        <div className='dual-banner'>
+        <div className='dual-banner-wrapper'>
+          <div className='dual-banner'>
           <img src="https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/wk43/Tops-WCE-wk43.jpg?imwidth=1536"
           alt="First slide"
-         fluid/>
+         />
         <img src="https://image.hm.com/content/dam/global_campaigns/season_02/women/startpage-category-entries/wk43/Cardigans-Jumpers-WCE-wk43.jpg?imwidth=1536"
           alt="Second slide"
         />
-        </div>        
+        </div>
+        </div>
+                
         <Carousel.Caption>
           <h3>Autumn Collection</h3>
           <p>New styles for the new season</p>

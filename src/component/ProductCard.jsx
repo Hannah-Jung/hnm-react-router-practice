@@ -12,7 +12,8 @@ const ProductCard = ({item}) => {
         <img src={item?.img}/>
         {item?.new && <div className='item-tag-new'>NEW</div>}
         {item?.choice && <div className='item-tag-choice'>Conscious Choice</div>}
-      </div>      
+      </div>
+            
       <div className='item-title'>{item?.title}</div>
       <div className='item-price'>${item?.price}</div>      
     </div>
