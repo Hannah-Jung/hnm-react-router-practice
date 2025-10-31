@@ -459,5 +459,10 @@ footer {
 
   .product-img {
     margin-top: 15px;
+    flex-direction: column;
+  }
+
+  .product-img img {
+    height: auto;
   }
 }
